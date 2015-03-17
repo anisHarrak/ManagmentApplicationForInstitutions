@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf12941517383220" configfile="/MEDCNAM/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="add_etablissement" x="122" y="1330" id="pf14000055928840" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14000055928841" path="/add_etablissement.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="etablissementList" x="338" y="1330" id="pf14000055928842" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14000055928841" path="/etablissementList.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="editsession" x="338" y="4018" id="pf14001077988813" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf14001077988814" inlinks="pf14001077988815" path="/editsession.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="sessionList" x="122" y="4018" id="pf14001077988816" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14001077988815" inlinks="pf14001077988814" path="/sessionList.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="connexion" id="pf14007417985250" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14007417985261" path="/connexion.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="menu_principale2" id="pf14007417985262" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14007417985261" path="/menu_principale2.jsp"/>
+  <links id="pf14000055928841" target="pf14000055928842" source="pf14000055928840" outcome="list"/>
+  <links id="pf14001077988814" target="pf14001077988816" source="pf14001077988813" outcome="list" redirect="true"/>
+  <links id="pf14001077988815" target="pf14001077988813" source="pf14001077988816"/>
+  <links id="pf14007417985261" target="pf14007417985262" source="pf14007417985250" outcome="list" redirect="true"/>
+</pageflow:Pageflow>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+  <managed-bean>
+		<managed-bean-name>etablissementCtrl</managed-bean-name>
+		<managed-bean-class>control.EtablissementCtrl</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		
+	</managed-bean>
+  <managed-bean>
+  	<managed-bean-name>moduleCtrl</managed-bean-name>
+  	<managed-bean-class>control.ModuleCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>utilisateurCtrl</managed-bean-name>
+  	<managed-bean-class>control.UtilisateurCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>visiteurCtrl</managed-bean-name>
+  	<managed-bean-class>control.VisiteurCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>personnelCtrl</managed-bean-name>
+  	<managed-bean-class>control.PersonnelCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>adminCtrl</managed-bean-name>
+  	<managed-bean-class>control.AdminCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>smsCtrl</managed-bean-name>
+  	<managed-bean-class>control.SMSCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>sms_inscritCtrl</managed-bean-name>
+  	<managed-bean-class>control.SMSInscritCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>resultatCtrl</managed-bean-name>
+  	<managed-bean-class>control.ResultatCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+  	<managed-bean-name>sessionCtrl</managed-bean-name>
+  	<managed-bean-class>control.SessionCtrl</managed-bean-class>
+  	<managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  		
+	<navigation-rule>
+		<display-name>add_etablissement</display-name>
+		<from-view-id>/add_etablissement.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/etablissementList.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>editsession</display-name>
+		<from-view-id>/editsession.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/sessionList.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>sessionList</display-name>
+		<from-view-id>/sessionList.jsp</from-view-id>
+		<navigation-case>
+			<to-view-id>/editsession.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>connexion</display-name>
+		<from-view-id>/connexion.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/menu_principale2.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>connexion</display-name>
+		<from-view-id>/connexion.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list1</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>go to home</display-name>
+		<from-view-id>/msg_par_nbr_msgenvoyes.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/menu_principale2.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>go to home</display-name>
+		<from-view-id>/msg_par_operateur.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/menu_principale2.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+</faces-config>
